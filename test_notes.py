@@ -7,12 +7,12 @@ class TestNotes(unittest.TestCase):
         notes = []
         notes = ajouter_note(notes, 5)
         self.assertEqual(len(notes), 1)
-        self.assertEqual(notes[0], 6)
+        self.assertEqual(notes[0], 5)
 
     def test_ajout_note_invalide_negatif(self):
         notes = []
         notes = ajouter_note(notes, -1)
-        self.assertEqual(len(notes), 1)
+        self.assertEqual(len(notes), 0)
 
     def test_ajout_note_invalide_sup6(self):
         notes = []
@@ -29,11 +29,11 @@ class TestNotes(unittest.TestCase):
 
     def test_note_max(self):
         notes = [3, 4, 6]
-        self.assertEqual(note_max(notes), 4)
+        self.assertEqual(note_max(notes), 6)
 
     def test_note_min(self):
         notes = [3, 4, 6]
-        self.assertEqual(note_min(notes), 4)
+        self.assertEqual(note_min(notes), 3)
 
 if __name__ == "__main__":
     unittest.main()
